@@ -140,7 +140,7 @@ a:focus, a:hover {
 .wthreecontact {
 	width: 15%;
 	float: left;
-	height: 100px;
+	height: 80px;
 	text-align: center;
 	border-left: 1px solid #777;
 }
@@ -197,7 +197,7 @@ a:focus, a:hover {
 	display: block;
 	float: left;
 	width: 100%;
-	height: 100%;
+	height: 600px;
 	border: 0;
 }
 
@@ -555,6 +555,7 @@ ul.callbacks_tabs {
 			transition: opacity 0.35s, transform 0.35s;
 			-webkit-transform: scale3d(1.05,1.05,1);
 			transform: scale3d(1.05,1.05,1);
+			height: 220px;
 		}
 
 		figure.effect-apollo figcaption::before {
@@ -2128,3 +2129,35 @@ textarea.message {
 }
 /*-- //cart --*/
 /*--//Buy-now--*/
+
+/*-- overrides --*/
+.popover {
+	position: absolute;
+	pointer-events: none;
+	max-width: 500px;
+	min-width: 250px;
+	}
+
+.popover.right{
+	margin-left: -45px;
+}
+
+.popover-title{
+    font-size: 14px !important;
+	text-align: center;
+	color: #ec952b !important;
+}
+
+.rowdetail {
+    height: 150px;
+}
+
+.price{
+	color: #ec952b !important;
+}
+
+.snipcart-details{
+	position: relative;
+}
+
+/*-- //overrides --*/
