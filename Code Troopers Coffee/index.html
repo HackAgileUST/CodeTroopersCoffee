@@ -125,7 +125,7 @@
 					<div class="team-grids">
 						<!-- Bottom to top-->
 						<div class="details-top-w3ls">
-							<div class="col-md-6 team-grid">
+							<div class="col-md-12 team-grid">
 								<div class="ih-item circle effect10 bottom_to_top col-md-4 col-sm-4">
 									<div class="img">
 										<img src="images/coffee-1.jpg" alt="Hot Chocolate" class="img-responsive">
@@ -136,7 +136,7 @@
 											<li class="cary-li-w3-agileits">
 												<div class="snipcart-details top_brand_home_details">
 													<a class="price" data-toggle="popover" data-html="true" data-trigger="hover" data-placement="right" data-container="body"
-														title="Hot Chocolate" data-content="<p>Steamed milk with vanilla and mocha flavored syrups</p><p>Topped with sweetened whipped cream and chocolate-flavored drizzle</p>">
+														title="Hot Chocolate" data-content="Steamed milk with vanilla and mocha flavored syrups</br>Topped with sweetened whipped cream and chocolate-flavored drizzle">
 														<form action="#" method="post">
 															<fieldset>
 																<div class="rowdetail">
@@ -163,17 +163,85 @@
 										</ul>
 									</div>
 								</div>
+
+
+
+								<div class="ih-item circle effect10 bottom_to_top col-md-4 col-sm-4">
+									<div class="img">
+										<img src="images/coffee-2.jpg" alt="Cinnamon Dolce Crème" class="img-responsive">
+										<span>Hot Chocolate</span>
+									</div>
+									<div class="info">
+										<ul>
+											<li class="cary-li-w3-agileits">
+												<div class="snipcart-details top_brand_home_details">
+													<a class="price" data-toggle="popover" data-html="true" data-trigger="hover" data-placement="right" data-container="body"
+														title="Cinnamon Dolce Crème" data-content="We combine freshly steamed milk and cinnamon dolce flavored syrup,</br>then top it off with sweetened whipped cream and cinnamon dolce topping.</br>You're in for a treat">
+														<form action="#" method="post">
+															<fieldset>
+																<div class="rowdetail">
+																</div>
+																<div>
+																	<div class="col-md-4">
+																		<h5>$10.00</h5>
+																		<input type="button" name="submit" value="Small" class="button" data-name="Cinnamon Dolce Crème Small" data-price="10" />
+																	</div>
+																	<div class="col-md-4">
+																		<h5>$20.00</h5>
+																		<input type="button" name="submit" value="Medium" class="button" data-name="Cinnamon Dolce Crème Medium" data-price="20" />
+																	</div>
+																	<div class="col-md-4">
+																		<h5>$30.00</h5>
+																		<input type="button" name="submit" value="Large" class="button" data-name="Cinnamon Dolce Crème Large" data-price="30" />
+																	</div>
+																</div>
+															</fieldset>
+														</form>
+													</a>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="ih-item circle effect10 bottom_to_top col-md-4 col-sm-4">
+									<div class="img">
+										<img src="images/coffee-1.jpg" alt="Pike Place Roast" class="img-responsive">
+										<span>Pike Place Roast</span>
+									</div>
+									<div class="info">
+										<ul>
+											<li class="cary-li-w3-agileits">
+												<div class="snipcart-details top_brand_home_details">
+													<a class="price" data-toggle="popover" data-html="true" data-trigger="hover" data-placement="right" data-container="body"
+														title="Pike Place Roast" data-content="Our signature medium-roasted with a smooth, balanced and rich flavor,</br>this is the perfect everyday coffee in a cup">
+														<form action="#" method="post">
+															<fieldset>
+																<div class="rowdetail">
+																</div>
+																<div>
+																	<div class="col-md-4">
+																		<h5>$10.00</h5>
+																		<input type="button" name="submit" value="Small" class="button" data-name="Pike Place Roast Small" data-price="10" />
+																	</div>
+																	<div class="col-md-4">
+																		<h5>$20.00</h5>
+																		<input type="button" name="submit" value="Medium" class="button" data-name="Pike Place Roast Medium" data-price="20" />
+																	</div>
+																	<div class="col-md-4">
+																		<h5>$30.00</h5>
+																		<input type="button" name="submit" value="Large" class="button" data-name="Pike Place Roast Large" data-price="30" />
+																	</div>
+																</div>
+															</fieldset>
+														</form>
+													</a>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
 								<!--
 
-								<div class="col-md-4 col-sm-4 gallery-top">
-									<a href="images/coffee-2.jpg" class="swipebox">
-										<figure class="effect-apollo">
-											<img src="images/coffee-2.jpg" alt="Cinnamon Dolce Crème - We combine freshly steamed milk and cinnamon dolce flavored syrup, then top it off with sweetened whipped cream and cinnamon dolce topping. You're in for a treat"
-												class="img-responsive">
-											<figcaption>Cinnamon Dolce Crème</figcaption>
-										</figure>
-									</a>
-								</div>
 								<div class="col-md-4 col-sm-4 gallery-top">
 									<a href="images/coffee-3.jpg" class="swipebox">
 										<figure class="effect-apollo">
@@ -466,7 +534,11 @@
 		<script>
 				// Mini Cart
 				paypal.minicart.render({
-					action: '#'
+					action: '#',
+					strings: {
+						button: "Buy now",
+						buttonAlt: "Buy Now"
+					}
 				});
 
 				if (~window.location.search.indexOf('reset=true')) {
@@ -488,6 +560,13 @@
 						amount: price
 					});
 				});
+
+				paypal.minicart.cart.on('checkout', function(e) {
+					e.preventDefault();
+					alert('Thank you');
+					paypal.minicart.reset();
+				});
+
 			</script>
 		<!-- //cart-js -->
 
