@@ -111,7 +111,7 @@ a:focus, a:hover {
 }
 
 .aitslogow3ls {
-	width: 70%;
+	width: 67%;
 	float: left;
 	height: 80px;
 	text-align: center;
@@ -138,15 +138,11 @@ a:focus, a:hover {
 }
 
 .wthreecontact {
-	width: 15%;
+	width: 18%;
 	float: left;
 	height: 80px;
 	text-align: center;
 	border-left: 1px solid #777;
-}
-
-.wthreecontact p {
-	padding-top: 27px;
 }
 
 .wthreecontact a {
