@@ -1918,7 +1918,6 @@ textarea.message {
 }
 .ih-item.circle {
     position: relative;
-    width: 275px;
     height: 275px;
     margin: 0 auto;
 }
@@ -2109,9 +2108,6 @@ textarea.message {
 }
 .snipcart-details input.button:hover {
     background: #ff0000;
-}
-#PPMiniCart .minicart-submit{
-	display:none!important;
 }
 #PPMiniCart .minicart-closer:focus{
 	outline:none;
